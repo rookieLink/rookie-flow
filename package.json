@@ -1,15 +1,22 @@
 {
-  "name": "gtaph-lib-vue",
+  "name": "graph-lib-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "build:dev": "turbo run build:dev --filter=./packages/*",
+    "build:turbo": "turbo run build --filter=./packages/*",
+    "build:cjs": "turbo run build:cjs --filter=./packages/*",
+    "setup:husky": "husky install .husky",
+    "prepare": "is-ci || run-p setup:husky build:dev",
+    "build:less": "node ./scripts/build-less"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.1"
+    "vue-router": "^3.5.1",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -17,6 +24,9 @@
     "@vue/cli-service": "~5.0.0",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "turbo": "^1.6.3",
+    "npm-run-all": "^4.1.5",
+    "husky": "^8.0.1"
   }
 }
