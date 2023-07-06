@@ -9,8 +9,9 @@ var __rest = (this && this.__rest) || function (s, e) {
       }
   return t;
 };
-import { ObjectExt, StringExt } from '@antv/x6-common';
-import { Point, Polyline } from '@antv/x6-geometry';
+import { StringExt } from '@packages/graph-common/string';
+import { ObjectExt } from '@packages/graph-common/object';
+import { Point, Polyline } from '@packages/graph-geometry';
 import { Registry } from '../registry/registry';
 import { Markup } from '../view/markup';
 import { ShareRegistry } from './registry';

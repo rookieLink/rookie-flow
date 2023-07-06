@@ -1,7 +1,6 @@
 import { Platform } from '../platform';
 const cssModules = [];
 export function ensure(name, content) {
-   console.log('-------ensure-----', name, content);
     const cssModule = cssModules.find((m) => m.name === name);
     if (cssModule) {
         cssModule.loadTimes += 1;

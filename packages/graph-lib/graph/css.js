@@ -33,7 +33,6 @@ export class CSSManager extends Base {
   }
 }
 __decorate([
-  console.log('init CSSManager', CSSManager.dispose),
   CSSManager.dispose(),
   __metadata("design:type", Function),
   __metadata("design:paramtypes", []),

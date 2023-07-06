@@ -12,6 +12,14 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import {Graph} from '@packages/graph-lib/index.js'
 
+import { startCase, camelCase, upperCase, snakeCase, words } from 'lodash-es'
+
+let s = 'foo-b aZr'
+debugger
+console.log('----------', words('ZAaPZaAaaZZZZZZZZZZZZ'))
+// console.log(startCase('foo-b ar').replace(/ /g, ''))
+console.log(startCase('ZAaPZaAaaZZZZZZZZZZZZ'))
+
 export default {
   name: 'HomeView',
   components: {
